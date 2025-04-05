@@ -779,7 +779,7 @@ const questions = [
         answer: "Baroukh ata Adonaï, élohénou mélekh ha’olam, acher kidéchanou bémitsvotav, vétsivanou al divré Torah."
     }
 ];
-unction loadQuestion() {
+function loadQuestion() {
     console.log("Loading question...");
     const questionElement = document.getElementById('question');
     const answerElement = document.getElementById('answer');

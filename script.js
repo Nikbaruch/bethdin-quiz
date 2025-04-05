@@ -811,5 +811,12 @@ function nextQuestion() {
     }
 }
 
+function previousQuestion() {
+    if (currentQuestionIndex > 0) {
+        currentQuestionIndex--;
+        loadQuestion();
+    }
+}
+
 // Charger la première question au chargement de la page
 loadQuestion();

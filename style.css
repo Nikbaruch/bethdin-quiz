@@ -14,16 +14,16 @@ body {
 }
 
 .card {
-    width: 100%;
-    max-width: 400px; /* Limite la largeur maximale */
+    width: 320px;
     min-height: 220px; /* Hauteur minimale pour une apparence uniforme */
+    max-width: 400px; /* Limite la largeur maximale */
     perspective: 1000px;
     margin: 20px auto;
     cursor: pointer;
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
     border-radius: 10px;
     overflow: hidden;
-    transition: height 0.3s ease, width 0.3s ease;
+    transition: width 0.3s ease, height 0.3s ease;
 }
 
 .card-inner {

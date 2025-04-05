@@ -14,15 +14,16 @@ body {
 }
 
 .card {
-    width: 320px;
-    height: 220px;
+    width: 100%;
+    max-width: 400px; /* Limite la largeur maximale */
+    min-height: 220px; /* Hauteur minimale pour une apparence uniforme */
     perspective: 1000px;
     margin: 20px auto;
     cursor: pointer;
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
     border-radius: 10px;
     overflow: hidden;
-    transition: height 0.3s ease;
+    transition: height 0.3s ease, width 0.3s ease;
 }
 
 .card-inner {
@@ -50,7 +51,7 @@ body {
     flex-direction: column;
     justify-content: center;
     font-size: 1.2em;
-    overflow-y: auto; /* Allow vertical scrolling */
+    overflow-y: auto; /* Permet le défilement vertical */
 }
 
 .card-back {

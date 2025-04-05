@@ -779,14 +779,19 @@ const questions = [
         answer: "Baroukh ata Adonaï, élohénou mélekh ha’olam, acher kidéchanou bémitsvotav, vétsivanou al divré Torah."
     }
 ];
-
-function loadQuestion() {
+unction loadQuestion() {
+    console.log("Loading question...");
     const questionElement = document.getElementById('question');
     const answerElement = document.getElementById('answer');
     const currentQuestion = questions[currentQuestionIndex];
 
-    questionElement.innerHTML = `<p>${currentQuestion.question}</p>`;
-    answerElement.innerHTML = `<p>${currentQuestion.answer}</p>`;
+    if (questionElement && answerElement) {
+        questionElement.innerHTML = `<p>${currentQuestion.question}</p>`;
+        answerElement.innerHTML = `<p>${currentQuestion.answer}</p>`;
+        console.log("Question loaded successfully.");
+    } else {
+        console.error("Question or answer element not found.");
+    }
 
     document.getElementById('card').classList.remove('flipped');
 }
@@ -819,4 +824,5 @@ function previousQuestion() {
 }
 
 // Charger la première question au chargement de la page
+console.log("Initializing quiz...");
 loadQuestion();
